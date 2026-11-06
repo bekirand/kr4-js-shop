@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина покупок — SoundPulse</title>
+  <meta name="description" content="Оформление и просмотр товаров в корзине интернет-магазина SoundPulse. Промокоды, расчет скидки и бесплатная доставка.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Ссылка быстрого перехода к содержимому для скринридеров и клавиатурной навигации -->
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <!-- Сквозная шапка сайта с навигацией и бейджем корзины -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="На главную SoundPulse">
+        <img src="images/logo.svg" alt="Логотип SoundPulse" width="36" height="36" class="site-header__logo-icon">
+        <span>SoundPulse</span>
+      </a>
+
+      <!-- Кнопка мобильного гамбургер-меню -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="catalog.html" class="site-nav__link">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="product.html" class="site-nav__link">Товар дня</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="cart.html" class="site-nav__link site-nav__link--active" aria-current="page">
+              Корзина <span class="nav-cart-badge js-cart-count">0</span>
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a href="order.html" class="site-nav__link">Оформить заказ</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-header__contacts">
+        <a href="tel:+78005553535" class="site-header__phone">+7 (800) 555-35-35</a>
+        <button type="button" class="button button--primary js-open-modal">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контент страницы корзины -->
+  <main id="main-content" class="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Навигационная цепочка хлебных крошек -->
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+            Корзина покупок
+          </li>
+        </ol>
+      </nav>
+
+      <header class="content-header">
+        <h1 class="section-title">Корзина покупок</h1>
+        <p class="section-subtitle">Проверьте состав заказа, примените промокод и перейдите к оформлению заявки</p>
+      </header>
+
+      <!-- Двухколоночный макет корзины: список товаров и карточка расчета -->
+      <div class="cart-layout">
+        <!-- Контейнер для динамического вывода строк товаров через JS -->
+        <div id="cart-items-container" class="cart-layout__items"></div>
+
+        <!-- Контейнер для расчета итоговой суммы и промокода -->
+        <aside id="cart-summary-container" class="cart-layout__summary"></aside>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Сквозной подвал сайта -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__col">
+          <div class="site-footer__logo">
+            <img src="images/logo.svg" alt="SoundPulse" width="28" height="28">
+            <span class="site-footer__logo-text">SoundPulse</span>
+          </div>
+          <p class="site-footer__text">
+            Премиальная аудиотехника, созданная инженерами для звукорежиссёров и аудиофилов.
+          </p>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Навигация</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html" class="site-footer__nav-link">Главная</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Каталог товаров</a></li>
+            <li><a href="cart.html" class="site-footer__nav-link">Корзина покупок</a></li>
+            <li><a href="order.html" class="site-footer__nav-link">Оформление заявки</a></li>
+            <li><a href="contacts.html" class="site-footer__nav-link">Контакты шоурума</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Категории</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="catalog.html" class="site-footer__nav-link">Беспроводные наушники</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Студийные мониторы</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">ЦАП и усилители</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Портативная акустика</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Контакты</h4>
+          <p class="site-footer__address">
+            г. Москва, ул. Мясницкая, 20<br>
+            Ежедневно с 10:00 до 21:00<br>
+            <a href="tel:+78005553535" class="site-footer__phone-link">+7 (800) 555-35-35</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 SoundPulse. Все права защищены.</p>
+        <p>Контрольная работа №4 | Студент: Белишко Кирилл (ЭФБО-17-25)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрого звонка -->
+  <dialog id="order-modal" class="modal">
+    <div class="modal__content">
+      <button type="button" class="modal__close js-close-modal" aria-label="Закрыть окно">✕</button>
+      <h2 class="modal__title">Консультация аудиоинженера</h2>
+      <p class="modal__desc">Оставьте ваш номер телефона, и мы перезвоним в течение 10 минут.</p>
+      <form class="modal__form" action="#" method="post">
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">Ваш телефон</label>
+          <input type="tel" id="modal-phone" name="phone" class="order-form__input" placeholder="+7 (999) 000-00-00" required>
+        </div>
+        <button type="submit" class="button button--primary button--full">Позвоните мне</button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Подключение скриптов интерактивности КР №4 -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
