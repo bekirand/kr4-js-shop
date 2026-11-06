@@ -109,6 +109,9 @@ function updateCartBadge() {
     badge.textContent = totalCount > 0 ? String(totalCount) : '0';
     if (totalCount > 0) {
       badge.classList.remove('visually-hidden');
+      badge.classList.remove('is-bumped');
+      void badge.offsetWidth;
+      badge.classList.add('is-bumped');
     }
   });
 }
@@ -274,6 +277,31 @@ function initCartPage() {
     const cardTitle = document.createElement('h2');
     cardTitle.className = 'cart-summary-card__title';
     cardTitle.textContent = 'Итог заказа';
+
+    // Индикатор прогресса бесплатной доставки
+    const freeShippingThreshold = 10000;
+    const tracker = document.createElement('div');
+    tracker.className = 'free-shipping-tracker';
+
+    const trackerText = document.createElement('div');
+    trackerText.className = 'free-shipping-tracker__text';
+    if (subtotal >= freeShippingThreshold) {
+      trackerText.textContent = '✓ Бесплатная курьерская доставка активна!';
+    } else {
+      const remaining = freeShippingThreshold - subtotal;
+      trackerText.textContent = `До бесплатной доставки: ${remaining.toLocaleString('ru-RU')} ₽`;
+    }
+
+    const trackerBar = document.createElement('div');
+    trackerBar.className = 'free-shipping-tracker__bar';
+    const trackerFill = document.createElement('div');
+    trackerFill.className = 'free-shipping-tracker__fill';
+    const progressPercent = Math.min(100, Math.round((subtotal / freeShippingThreshold) * 100));
+    trackerFill.style.width = `${progressPercent}%`;
+    trackerBar.append(trackerFill);
+
+    tracker.append(trackerText, trackerBar);
+    summaryCard.append(cardTitle, tracker);
 
     // Строка товаров
     const rowSubtotal = document.createElement('div');
