@@ -1,0 +1,545 @@
+/* Адаптивные стили и доступность магазина SoundPulse (КР №3) */
+
+/* 1. БАЗОВЫЕ НАСТРОЙКИ ДОСТУПНОСТИ И СБРОС СЕТКИ */
+
+/* Ссылка быстрого перехода к содержимому (Skip Link) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-md);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: var(--shadow-md);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: var(--space-md);
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 2px;
+}
+
+/* Контрастный клавиатурный фокус по WCAG AA */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Резиновые изображения и медиа */
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Защита от горизонтального скролла всей страницы */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+/* 2. АДАПТИВНАЯ НАВИГАЦИЯ И ШАПКА */
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav-toggle:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.nav-toggle__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 859px) {
+  .site-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) 0;
+  }
+
+  .site-header__contacts {
+    display: none;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-bottom: 2px solid var(--color-primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: var(--space-md);
+    z-index: 100;
+  }
+
+  .site-nav--open {
+    display: block;
+    animation: fadeInMenu 0.2s ease-out;
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .site-nav__link {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    font-size: 1.05rem;
+    border-radius: var(--radius-sm);
+    min-height: 44px;
+    line-height: 28px;
+  }
+
+  .site-nav__link:hover {
+    background-color: var(--color-primary-light);
+  }
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 860px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: block !important;
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-lg);
+  }
+}
+
+/* 3. АДАПТИВНЫЙ HERO-БЛОК */
+
+@media (max-width: 767px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .hero__title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .hero__description {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .hero__actions .button {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__image {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-xl);
+    gap: var(--space-xl);
+  }
+
+  .hero__title {
+    font-size: 2.25rem;
+  }
+
+  .hero__image {
+    max-width: 320px;
+  }
+}
+
+/* 4. АДАПТИВНЫЕ СЕТКИ КАРТОЧЕК И ПРЕИМУЩЕСТВ */
+
+@media (max-width: 639px) {
+  .cards-grid,
+  .advantages-grid,
+  .catalog-grid,
+  .reviews-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--space-md) !important;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .product-card__image-wrapper {
+    height: 180px;
+  }
+
+  .button {
+    min-height: 44px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .cards-grid,
+  .advantages-grid,
+  .catalog-grid,
+  .reviews-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-md) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards-grid,
+  .catalog-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-lg) !important;
+  }
+
+  .advantages-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-lg) !important;
+  }
+}
+
+/* 5. АДАПТИВНЫЙ КАТАЛОГ И ФИЛЬТРЫ */
+
+@media (max-width: 899px) {
+  .catalog-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-lg) !important;
+  }
+
+  .catalog-filter {
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: var(--space-md);
+  }
+
+  .catalog-filter__group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-xs);
+  }
+}
+
+@media (min-width: 900px) {
+  .catalog-layout {
+    display: grid !important;
+    grid-template-columns: 280px 1fr !important;
+    gap: var(--space-xl) !important;
+    align-items: start;
+  }
+
+  .catalog-filter {
+    position: sticky !important;
+    top: 90px;
+  }
+}
+
+/* 6. АДАПТИВНАЯ КАРТОЧКА ТОВАРА */
+
+@media (max-width: 859px) {
+  .product-details {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-lg) !important;
+    padding: var(--space-md) !important;
+    text-align: center;
+  }
+
+  .product-gallery {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .product-info__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .product-info__actions .button {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 860px) {
+  .product-details {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--space-xxl) !important;
+    padding: var(--space-xl) !important;
+  }
+}
+
+/* 7. АДАПТИВНАЯ ТАБЛИЦА ХАРАКТЕРИСТИК (КАРТОЧНЫЙ ВИД) */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 639px) {
+  .specs-table,
+  .specs-table__body,
+  .specs-table__row,
+  .specs-table__cell {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .specs-table__head {
+    display: none !important;
+  }
+
+  .specs-table__row {
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .specs-table__cell--row-head {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-primary);
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .specs-table__cell:not(.specs-table__cell--row-head) {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md) !important;
+    border-bottom: 1px dashed var(--color-border);
+    text-align: right;
+    font-size: 0.9rem;
+  }
+
+  .specs-table__cell:not(.specs-table__cell--row-head):last-child {
+    border-bottom: none;
+  }
+
+  .specs-table__cell:not(.specs-table__cell--row-head)::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-align: left;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    max-width: 45%;
+  }
+}
+
+/* 8. АДАПТИВНЫЕ ФОРМЫ */
+
+@media (max-width: 639px) {
+  .form-container,
+  .order-form,
+  .feedback-form {
+    padding: var(--space-md);
+    width: 100%;
+  }
+
+  .order-form__input,
+  .order-form__select,
+  .order-form__textarea,
+  .feedback-form__input,
+  .feedback-form__textarea {
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .order-form__actions,
+  .feedback-form__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .order-form__actions .button,
+  .feedback-form__button {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* 9. АДАПТИВНЫЕ КОНТАКТЫ */
+
+@media (max-width: 859px) {
+  .contacts-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-xl) !important;
+  }
+}
+
+@media (min-width: 860px) {
+  .contacts-layout {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--space-xxl) !important;
+  }
+}
+
+/* 10. АДАПТИВНЫЙ ПОДВАЛ (FOOTER) */
+
+@media (max-width: 767px) {
+  .site-footer__inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-lg) !important;
+    text-align: left !important;
+  }
+
+  .site-footer__col {
+    width: 100% !important;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-footer__inner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-lg) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer__inner {
+    display: grid !important;
+    grid-template-columns: 2fr repeat(3, 1fr) !important;
+    gap: var(--space-xl) !important;
+  }
+}
+
+/* 11. ПОДДЕРЖКА PREFERS-REDUCED-MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 12. ШИРОКИЕ МОНИТОРЫ (>= 1440px) */
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}

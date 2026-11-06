@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог аудиотехники и акустики — SoundPulse</title>
+  <meta name="description" content="Полный каталог аудиофильской техники SoundPulse: наушники, мониторы, ЦАП, портативная акустика. Фильтры по параметрам и официальная гарантия.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Ссылка быстрого перехода к содержимому для скринридеров и клавиатурной навигации -->
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <!-- Сквозная шапка сайта с навигацией -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="На главную SoundPulse">
+        <img src="images/logo.svg" alt="Логотип SoundPulse" width="36" height="36" class="site-header__logo-icon">
+        <span>SoundPulse</span>
+      </a>
+
+      
+      <!-- Кнопка мобильного гамбургер-меню -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="catalog.html" class="site-nav__link site-nav__link--active" aria-current="page">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="product.html" class="site-nav__link">Товар дня</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="order.html" class="site-nav__link">Заказ</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-header__contacts">
+        <a href="tel:+78005553535" class="site-header__phone">+7 (800) 555-35-35</a>
+        <button type="button" class="button button--primary js-open-modal">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Единственный тег main на странице -->
+  <main id="main-content" class="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Навигационная цепочка хлебных крошек -->
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+            Каталог продукции
+          </li>
+        </ol>
+      </nav>
+
+      <header class="content-header">
+        <h1 class="section-title">Каталог аудиотехники</h1>
+        <p class="section-subtitle">Профессиональное оборудование для студийной работы, дома и путешествий</p>
+      </header>
+
+      <!-- Двухколоночная сетка: фильтры и каталог -->
+      <div class="catalog-layout">
+
+        <!-- Боковая панель фильтрации со sticky-позиционированием -->
+        <aside class="catalog-filter" aria-label="Фильтры каталога">
+          <h2 class="catalog-filter__title">Параметры выбора</h2>
+
+          <form action="catalog.html" method="get">
+            <!-- Группа: Категория товара -->
+            <fieldset class="catalog-filter__group">
+              <legend class="catalog-filter__group-title">Категория</legend>
+              <label class="catalog-filter__item">
+                <input type="checkbox" name="category" value="headphones" checked>
+                <span>Наушники (14)</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="checkbox" name="category" value="monitors" checked>
+                <span>Студийные мониторы (8)</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="checkbox" name="category" value="dacs" checked>
+                <span>ЦАП и усилители (6)</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="checkbox" name="category" value="speakers" checked>
+                <span>Портативная акустика (9)</span>
+              </label>
+            </fieldset>
+
+            <!-- Группа: Тип излучателя -->
+            <fieldset class="catalog-filter__group">
+              <legend class="catalog-filter__group-title">Тип излучателя</legend>
+              <label class="catalog-filter__item">
+                <input type="radio" name="driver" value="all" checked>
+                <span>Все типы</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="radio" name="driver" value="dynamic">
+                <span>Динамические</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="radio" name="driver" value="planar">
+                <span>Планарно-магнитные</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="radio" name="driver" value="armature">
+                <span>Арматурные</span>
+              </label>
+            </fieldset>
+
+            <!-- Группа: Наличие и скидки -->
+            <fieldset class="catalog-filter__group">
+              <legend class="catalog-filter__group-title">Особенности</legend>
+              <label class="catalog-filter__item">
+                <input type="checkbox" name="in_stock" value="true" checked>
+                <span>Только в наличии</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="checkbox" name="has_discount" value="true">
+                <span>Со скидкой</span>
+              </label>
+              <label class="catalog-filter__item">
+                <input type="checkbox" name="has_anc" value="true">
+                <span>С активным ANC</span>
+              </label>
+            </fieldset>
+
+            <div class="catalog-filter__actions">
+              <button type="submit" class="button button--primary" style="width: 100%; margin-bottom: 8px;">Применить</button>
+              <a href="catalog.html" class="button button--secondary" style="width: 100%;">Сбросить</a>
+            </div>
+          </form>
+        </aside>
+
+        <!-- Секция со списком карточек товаров -->
+        <section class="catalog-content" aria-labelledby="catalog-items-title">
+          <h2 id="catalog-items-title" class="visually-hidden">Список товаров каталога</h2>
+
+          <div class="catalog-grid">
+
+            <!-- Товар 1: Флагманские наушники -->
+            <article class="product-card product-card--hit">
+              <span class="product-card__badge product-card__badge--hit">Хит продаж</span>
+              <div class="product-card__image-wrap">
+                <img src="images/headphones-pro.svg" alt="Беспроводные наушники SoundPulse Pro Wireless" class="product-card__image" width="320" height="240" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__category">Беспроводные наушники</span>
+                <h3 class="product-card__title">SoundPulse Pro Wireless</h3>
+                <p class="product-card__description">
+                  Флагманские закрытые наушники с гибридным ANC, кодеком LDAC и титановыми драйверами 40 мм.
+                </p>
+                <div class="product-card__meta">
+                  <span class="product-card__rating">★★★★★ 4.9 (124)</span>
+                  <span class="product-card__stock">В наличии</span>
+                </div>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">28 990 ₽</span>
+                  <span class="product-card__price-old">34 990 ₽</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                  <a href="order.html?product=SoundPulse-Pro-Wireless" class="button button--primary product-card__button">Купить</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Товар 2: Студийные мониторы -->
+            <article class="product-card">
+              <span class="product-card__badge product-card__badge--new">Новинка</span>
+              <div class="product-card__image-wrap">
+                <img src="images/studio-monitors.svg" alt="Студийные мониторы SoundPulse Studio Monitor 5" class="product-card__image" width="320" height="240" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__category">Студийная акустика</span>
+                <h3 class="product-card__title">SoundPulse Studio Monitor 5</h3>
+                <p class="product-card__description">
+                  Активные мониторы ближнего поля с кевларовым диффузором и встроенным DSP-процессором коррекции.
+                </p>
+                <div class="product-card__meta">
+                  <span class="product-card__rating">★★★★★ 5.0 (48)</span>
+                  <span class="product-card__stock">В наличии</span>
+                </div>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">42 500 ₽</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                  <a href="order.html?product=SoundPulse-Studio-5" class="button button--primary product-card__button">Купить</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Товар 3: ЦАП и усилитель -->
+            <article class="product-card product-card--discount">
+              <span class="product-card__badge product-card__badge--discount">-18%</span>
+              <div class="product-card__image-wrap">
+                <img src="images/dac-amp.svg" alt="ЦАП и усилитель SoundPulse DAC Audio Master" class="product-card__image" width="320" height="240" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__category">Усилители и ЦАП</span>
+                <h3 class="product-card__title">SoundPulse DAC Audio Master</h3>
+                <p class="product-card__description">
+                  Балансный настольный ЦАП с чипом ESS Sabre, поддержкой DSD512 и мощным усилителем класса A.
+                </p>
+                <div class="product-card__meta">
+                  <span class="product-card__rating">★★★★☆ 4.8 (37)</span>
+                  <span class="product-card__stock">Осталось 3 шт.</span>
+                </div>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">22 950 ₽</span>
+                  <span class="product-card__price-old">27 990 ₽</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                  <a href="order.html?product=SoundPulse-DAC-Master" class="button button--primary product-card__button">Купить</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Товар 4: Портативная акустика -->
+            <article class="product-card product-card--hit">
+              <span class="product-card__badge product-card__badge--hit">Хит продаж</span>
+              <div class="product-card__image-wrap">
+                <img src="images/portable-speaker.svg" alt="Портативная колонка SoundPulse Beat Wave" class="product-card__image" width="320" height="240" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__category">Портативная акустика</span>
+                <h3 class="product-card__title">SoundPulse Beat Wave</h3>
+                <p class="product-card__description">
+                  Влагозащита IP67, 30 Вт суммарной мощности, пассивные излучатели баса и 24 часа автономной работы.
+                </p>
+                <div class="product-card__meta">
+                  <span class="product-card__rating">★★★★★ 4.9 (89)</span>
+                  <span class="product-card__stock">В наличии</span>
+                </div>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">12 490 ₽</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                  <a href="order.html?product=SoundPulse-Beat-Wave" class="button button--primary product-card__button">Купить</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Товар 5: Внутриканальные TWS -->
+            <article class="product-card">
+              <span class="product-card__badge product-card__badge--new">Новинка</span>
+              <div class="product-card__image-wrap">
+                <img src="images/earbuds.svg" alt="Беспроводные внутриканальные наушники SoundPulse Air Clarity" class="product-card__image" width="320" height="240" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__category">Внутриканальные TWS</span>
+                <h3 class="product-card__title">SoundPulse Air Clarity</h3>
+                <p class="product-card__description">
+                  Компактные беспроводные наушники с адаптивным шумоподавлением, 6 микрофонами и беспроводной зарядкой.
+                </p>
+                <div class="product-card__meta">
+                  <span class="product-card__rating">★★★★☆ 4.7 (52)</span>
+                  <span class="product-card__stock">В наличии</span>
+                </div>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">15 990 ₽</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                  <a href="order.html?product=SoundPulse-Air-Clarity" class="button button--primary product-card__button">Купить</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Товар 6: Профессиональные планарные наушники -->
+            <article class="product-card product-card--discount">
+              <span class="product-card__badge product-card__badge--discount">-12%</span>
+              <div class="product-card__image-wrap">
+                <img src="images/headphones-pro.svg" alt="Планарные наушники SoundPulse Studio Reference" class="product-card__image" width="320" height="240" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__category">Открытые мониторные</span>
+                <h3 class="product-card__title">SoundPulse Studio Reference</h3>
+                <p class="product-card__description">
+                  Открытая акустическая конструкция, сверхтонкая майларовая диафрагма и непревзойденная сцена.
+                </p>
+                <div class="product-card__meta">
+                  <span class="product-card__rating">★★★★★ 5.0 (29)</span>
+                  <span class="product-card__stock">Под заказ</span>
+                </div>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">49 900 ₽</span>
+                  <span class="product-card__price-old">56 900 ₽</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                  <a href="order.html?product=SoundPulse-Studio-Reference" class="button button--primary product-card__button">Купить</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Нативное модальное окно быстрого заказа -->
+  <dialog id="order-modal" class="modal" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2 id="modal-title" class="modal__title">Быстрый заказ</h2>
+        <button type="button" class="modal__close js-close-modal" aria-label="Закрыть модальное окно">&times;</button>
+      </div>
+      <form class="order-form" action="order.html" method="get">
+        <div class="order-form__field">
+          <label for="modal-name" class="order-form__label">Ваше имя <span class="order-form__required">*</span></label>
+          <input type="text" id="modal-name" name="name" class="order-form__input" placeholder="Иван Петров" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-phone" class="order-form__label">Телефон <span class="order-form__required">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="order-form__input" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-product" class="order-form__label">Интересующая модель</label>
+          <select id="modal-product" name="product" class="order-form__select">
+            <option value="SoundPulse Pro Wireless">SoundPulse Pro Wireless</option>
+            <option value="SoundPulse Studio 5">SoundPulse Studio Monitor 5</option>
+            <option value="SoundPulse DAC Audio Master">SoundPulse DAC Audio Master</option>
+            <option value="SoundPulse Beat Wave">SoundPulse Beat Wave</option>
+            <option value="SoundPulse Air Clarity">SoundPulse Air Clarity</option>
+            <option value="SoundPulse Studio Reference">SoundPulse Studio Reference</option>
+          </select>
+        </div>
+        <div class="order-form__checkbox-field">
+          <input type="checkbox" id="modal-consent" name="consent" required>
+          <label for="modal-consent" class="order-form__label">Согласен на обработку персональных данных</label>
+        </div>
+        <div class="order-form__actions">
+          <button type="button" class="button button--secondary js-close-modal">Отмена</button>
+          <button type="submit" class="button button--primary">Заказать звонок</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Фиксированная кнопка возврата к началу страницы -->
+  <a href="#top" class="scroll-top-btn" aria-label="Вернуться к началу страницы">↑</a>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h3 class="site-footer__brand-title">SoundPulse</h3>
+          <p class="site-footer__description">
+            Официальный интернет-магазин аудиотехники студийного и аудиофильского уровня.
+          </p>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Навигация</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html" class="site-footer__nav-link">Главная</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Каталог товаров</a></li>
+            <li><a href="product.html" class="site-footer__nav-link">Товар дня</a></li>
+            <li><a href="order.html" class="site-footer__nav-link">Оформление заявки</a></li>
+            <li><a href="contacts.html" class="site-footer__nav-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Категории</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="catalog.html" class="site-footer__nav-link">Беспроводные наушники</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Студийные мониторы</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">ЦАП и усилители</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Портативные колонки</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Связь с нами</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="tel:+78005553535" class="site-footer__nav-link">+7 (800) 555-35-35</a></li>
+            <li><a href="mailto:info@soundpulse.ru" class="site-footer__nav-link">info@soundpulse.ru</a></li>
+            <li><span class="site-footer__nav-link">Москва, Ленинградский пр-т, 39</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 SoundPulse. Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+        <p>Выполнил: Белишко Кирилл (группа ЭФБО-17-25)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

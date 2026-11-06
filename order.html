@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа — SoundPulse</title>
+  <meta name="description" content="Оформление заказа в магазине SoundPulse. Быстрая доставка по всей России, тест-драйв 14 дней и официальная гарантия 2 года.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Ссылка быстрого перехода к содержимому для скринридеров и клавиатурной навигации -->
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <!-- Сквозная шапка сайта с навигацией -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="На главную SoundPulse">
+        <img src="images/logo.svg" alt="Логотип SoundPulse" width="36" height="36" class="site-header__logo-icon">
+        <span>SoundPulse</span>
+      </a>
+
+      
+      <!-- Кнопка мобильного гамбургер-меню -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="catalog.html" class="site-nav__link">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="product.html" class="site-nav__link">Товар дня</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="order.html" class="site-nav__link site-nav__link--active" aria-current="page">Заказ</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-header__contacts">
+        <a href="tel:+78005553535" class="site-header__phone">+7 (800) 555-35-35</a>
+        <button type="button" class="button button--primary js-open-modal">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Единственный тег main на странице -->
+  <main id="main-content" class="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Навигационная цепочка хлебных крошек -->
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+            Оформление заявки на покупку
+          </li>
+        </ol>
+      </nav>
+
+      <header class="content-header" style="text-align: center; max-width: 680px; margin: 0 auto var(--space-xl);">
+        <h1 class="section-title">Оформление заявки</h1>
+        <p class="section-subtitle">Заполните контактные данные, и персональный аудиолог свяжется с вами для подтверждения заказа и условий доставки</p>
+      </header>
+
+      <!-- Контейнер формы заказа с семантическими fieldset и legend -->
+      <div class="form-container">
+        <form class="order-form" action="#" method="post">
+
+          <!-- Раздел 1: Контактные данные покупателя -->
+          <fieldset class="order-form__fieldset">
+            <legend class="order-form__legend">1. Контактная информация</legend>
+
+            <div class="order-form__field">
+              <label for="order-fullname" class="order-form__label">
+                Имя и фамилия <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="order-fullname" name="fullname" class="order-form__input" placeholder="Александр Смирнов" required autocomplete="name">
+            </div>
+
+            <div class="order-form__field">
+              <label for="order-email" class="order-form__label">
+                Электронная почта <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input type="email" id="order-email" name="email" class="order-form__input" placeholder="alexander@example.com" required autocomplete="email">
+            </div>
+
+            <div class="order-form__field">
+              <label for="order-phone" class="order-form__label">
+                Контактный телефон <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input type="tel" id="order-phone" name="phone" class="order-form__input" placeholder="+7 (999) 000-00-00" required autocomplete="tel">
+            </div>
+          </fieldset>
+
+          <!-- Раздел 2: Параметры заказа -->
+          <fieldset class="order-form__fieldset">
+            <legend class="order-form__legend">2. Выбор оборудования и доставка</legend>
+
+            <div class="order-form__field">
+              <label for="order-model" class="order-form__label">
+                Модель устройства <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <select id="order-model" name="model" class="order-form__select" required>
+                <option value="">-- Выберите модель из списка --</option>
+                <option value="SoundPulse-Pro-Wireless" selected>SoundPulse Pro Wireless (28 990 ₽)</option>
+                <option value="SoundPulse-Studio-5">SoundPulse Studio Monitor 5 (42 500 ₽)</option>
+                <option value="SoundPulse-DAC-Master">SoundPulse DAC Audio Master (22 950 ₽)</option>
+                <option value="SoundPulse-Beat-Wave">SoundPulse Beat Wave (12 490 ₽)</option>
+                <option value="SoundPulse-Air-Clarity">SoundPulse Air Clarity (15 990 ₽)</option>
+                <option value="SoundPulse-Studio-Reference">SoundPulse Studio Reference (49 900 ₽)</option>
+              </select>
+            </div>
+
+            <div class="order-form__field">
+              <label for="order-color" class="order-form__label">Цветовое исполнение</label>
+              <select id="order-color" name="color" class="order-form__select">
+                <option value="midnight-black">Midnight Black (Классический черный)</option>
+                <option value="lunar-silver">Lunar Silver (Серебристый титан)</option>
+                <option value="deep-navy">Deep Navy (Темно-синий матовый)</option>
+              </select>
+            </div>
+
+            <div class="order-form__field">
+              <label for="order-delivery" class="order-form__label">Город и адрес доставки</label>
+              <input type="text" id="order-delivery" name="delivery_address" class="order-form__input" placeholder="г. Москва, ул. Тверская, д. 12, кв. 45">
+            </div>
+
+            <div class="order-form__field">
+              <label for="order-comment" class="order-form__label">Комментарий к заявке или пожелания по времени звонка</label>
+              <textarea id="order-comment" name="comment" class="order-form__textarea" placeholder="Удобно принять звонок после 15:00, интересует возможность прослушивания в шоуруме..."></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Раздел 3: Согласие и отправка -->
+          <div class="order-form__checkbox-field">
+            <input type="checkbox" id="order-consent" name="consent" required>
+            <label for="order-consent" class="order-form__label">
+              Я подтверждаю согласие на обработку моих персональных данных в соответствии с Федеральным законом № 152-ФЗ <span class="order-form__required" aria-hidden="true">*</span>
+            </label>
+          </div>
+
+          <div class="order-form__actions">
+            <button type="reset" class="button button--secondary">Очистить поля</button>
+            <button type="submit" class="button button--primary" style="padding: 14px 32px; font-size: 1.05rem;">
+              Подтвердить и отправить заявку
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Нативное модальное окно быстрого заказа -->
+  <dialog id="order-modal" class="modal" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2 id="modal-title" class="modal__title">Быстрый заказ</h2>
+        <button type="button" class="modal__close js-close-modal" aria-label="Закрыть модальное окно">&times;</button>
+      </div>
+      <form class="order-form" action="order.html" method="get">
+        <div class="order-form__field">
+          <label for="modal-name" class="order-form__label">Ваше имя <span class="order-form__required">*</span></label>
+          <input type="text" id="modal-name" name="name" class="order-form__input" placeholder="Иван Петров" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-phone" class="order-form__label">Телефон <span class="order-form__required">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="order-form__input" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="order-form__checkbox-field">
+          <input type="checkbox" id="modal-consent" name="consent" required>
+          <label for="modal-consent" class="order-form__label">Согласен на обработку персональных данных</label>
+        </div>
+        <div class="order-form__actions">
+          <button type="button" class="button button--secondary js-close-modal">Отмена</button>
+          <button type="submit" class="button button--primary">Заказать звонок</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Фиксированная кнопка возврата к началу страницы -->
+  <a href="#top" class="scroll-top-btn" aria-label="Вернуться к началу страницы">↑</a>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h3 class="site-footer__brand-title">SoundPulse</h3>
+          <p class="site-footer__description">
+            Официальный интернет-магазин аудиотехники студийного и аудиофильского уровня.
+          </p>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Навигация</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html" class="site-footer__nav-link">Главная</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Каталог товаров</a></li>
+            <li><a href="product.html" class="site-footer__nav-link">Товар дня</a></li>
+            <li><a href="order.html" class="site-footer__nav-link">Оформление заявки</a></li>
+            <li><a href="contacts.html" class="site-footer__nav-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Гарантии</h4>
+          <ul class="site-footer__nav-list">
+            <li><span class="site-footer__nav-link">Гарантия 2 года</span></li>
+            <li><span class="site-footer__nav-link">Тест-драйв 14 дней</span></li>
+            <li><span class="site-footer__nav-link">Сертифицированный товар</span></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Связь с нами</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="tel:+78005553535" class="site-footer__nav-link">+7 (800) 555-35-35</a></li>
+            <li><a href="mailto:info@soundpulse.ru" class="site-footer__nav-link">info@soundpulse.ru</a></li>
+            <li><span class="site-footer__nav-link">Москва, Ленинградский пр-т, 39</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 SoundPulse. Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+        <p>Выполнил: Белишко Кирилл (группа ЭФБО-17-25)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

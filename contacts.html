@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты и флагманский шоурум в Москве — SoundPulse</title>
+  <meta name="description" content="Контакты магазина аудиофильской техники SoundPulse: адрес шоурума в Москве, телефоны, график работы и форма записи на индивидуальное прослушивание.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Ссылка быстрого перехода к содержимому для скринридеров и клавиатурной навигации -->
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <!-- Сквозная шапка сайта с навигацией -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="На главную SoundPulse">
+        <img src="images/logo.svg" alt="Логотип SoundPulse" width="36" height="36" class="site-header__logo-icon">
+        <span>SoundPulse</span>
+      </a>
+
+      
+      <!-- Кнопка мобильного гамбургер-меню -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="catalog.html" class="site-nav__link">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="product.html" class="site-nav__link">Товар дня</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="order.html" class="site-nav__link">Заказ</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link site-nav__link--active" aria-current="page">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-header__contacts">
+        <a href="tel:+78005553535" class="site-header__phone">+7 (800) 555-35-35</a>
+        <button type="button" class="button button--primary js-open-modal">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Единственный тег main на странице -->
+  <main id="main-content" class="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Навигационная цепочка хлебных крошек -->
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+            Контакты и шоурум
+          </li>
+        </ol>
+      </nav>
+
+      <header class="content-header">
+        <h1 class="section-title">Контакты и шоурум</h1>
+        <p class="section-subtitle">Приезжайте на персональное прослушивание в звукоизолированную комнату или задайте вопрос нашим специалистам</p>
+      </header>
+
+      <!-- Двухколоночный макет: реквизиты/адрес и форма обратной связи -->
+      <div class="contacts-layout">
+
+        <!-- Контактная информация с семантическим тегом address -->
+        <div class="contacts-info">
+          <article class="contacts-card">
+            <h2 class="contacts-card__title">Флагманский шоурум SoundPulse</h2>
+            <address class="contacts-card__content">
+              г. Москва, Ленинградский проспект, дом 39, строение 1<br>
+              Метро «Аэропорт» или «Динамо» (5 минут пешком)<br>
+              Бесплатная гостевая парковка для клиентов шоурума
+            </address>
+          </article>
+
+          <article class="contacts-card">
+            <h2 class="contacts-card__title">График работы</h2>
+            <p class="contacts-card__content">
+              <strong>Шоурум и прослушивание:</strong> ежедневно с 10:00 до 21:00<br>
+              <strong>Отдел онлайн-продаж:</strong> круглосуточно без выходных<br>
+              <strong>Сервисный центр:</strong> Пн–Пт с 10:00 до 19:00
+            </p>
+          </article>
+
+          <article class="contacts-card">
+            <h2 class="contacts-card__title">Телефоны и электронная почта</h2>
+            <p class="contacts-card__content">
+              Бесплатная горячая линия: <a href="tel:+78005553535">+7 (800) 555-35-35</a><br>
+              Прямой номер шоурума: <a href="tel:+74951234567">+7 (495) 123-45-67</a><br>
+              Отдел клиентского сервиса: <a href="mailto:info@soundpulse.ru">info@soundpulse.ru</a><br>
+              Вопросы сотрудничества: <a href="mailto:partners@soundpulse.ru">partners@soundpulse.ru</a>
+            </p>
+          </article>
+
+          <article class="contacts-card">
+            <h2 class="contacts-card__title">Реквизиты организации</h2>
+            <p class="contacts-card__content">
+              ООО «СаундПульс Аудио»<br>
+              ОГРН: 1267700123456 | ИНН: 7701987654<br>
+              Р/с: 40702810900000012345 в ПАО Сбербанк
+            </p>
+          </article>
+        </div>
+
+        <!-- Форма обратной связи и записи на прослушивание -->
+        <section class="form-container" style="margin: 0; max-width: 100%;" aria-labelledby="feedback-form-title">
+          <h2 id="feedback-form-title" class="contacts-card__title" style="font-size: 1.35rem; margin-bottom: var(--space-md);">
+            Запись на прослушивание / Обратная связь
+          </h2>
+
+          <form class="order-form" action="#" method="post">
+            <div class="order-form__field">
+              <label for="feedback-name" class="order-form__label">
+                Ваше имя <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="feedback-name" name="name" class="order-form__input" placeholder="Евгений Романов" required autocomplete="name">
+            </div>
+
+            <div class="order-form__field">
+              <label for="feedback-email" class="order-form__label">
+                Электронная почта <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input type="email" id="feedback-email" name="email" class="order-form__input" placeholder="evgeniy@example.com" required autocomplete="email">
+            </div>
+
+            <div class="order-form__field">
+              <label for="feedback-phone" class="order-form__label">
+                Контактный телефон <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input type="tel" id="feedback-phone" name="phone" class="order-form__input" placeholder="+7 (999) 000-00-00" required autocomplete="tel">
+            </div>
+
+            <div class="order-form__field">
+              <label for="feedback-topic" class="order-form__label">Тема обращения</label>
+              <select id="feedback-topic" name="topic" class="order-form__select">
+                <option value="listening-room">Запись на тест-драйв в шоурум</option>
+                <option value="consultation">Подбор аудиотракта под ключ</option>
+                <option value="order-status">Уточнить статус доставки</option>
+                <option value="warranty">Сервисное обслуживание и гарантия</option>
+              </select>
+            </div>
+
+            <div class="order-form__field">
+              <label for="feedback-message" class="order-form__label">
+                Ваш вопрос или желаемое время визита <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <textarea id="feedback-message" name="message" class="order-form__textarea" placeholder="Хотел бы послушать модель SoundPulse Pro Wireless в паре с ЦАП Audio Master в субботу днем..." required></textarea>
+            </div>
+
+            <div class="order-form__checkbox-field">
+              <input type="checkbox" id="feedback-consent" name="consent" required>
+              <label for="feedback-consent" class="order-form__label">
+                Согласен на обработку персональных данных в соответствии с политикой конфиденциальности <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+            </div>
+
+            <div class="order-form__actions">
+              <button type="submit" class="button button--primary" style="width: 100%; padding: 14px 24px;">
+                Отправить сообщение
+              </button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Нативное модальное окно быстрого заказа -->
+  <dialog id="order-modal" class="modal" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2 id="modal-title" class="modal__title">Быстрый заказ</h2>
+        <button type="button" class="modal__close js-close-modal" aria-label="Закрыть модальное окно">&times;</button>
+      </div>
+      <form class="order-form" action="order.html" method="get">
+        <div class="order-form__field">
+          <label for="modal-name" class="order-form__label">Ваше имя <span class="order-form__required">*</span></label>
+          <input type="text" id="modal-name" name="name" class="order-form__input" placeholder="Иван Петров" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-phone" class="order-form__label">Телефон <span class="order-form__required">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="order-form__input" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="order-form__checkbox-field">
+          <input type="checkbox" id="modal-consent" name="consent" required>
+          <label for="modal-consent" class="order-form__label">Согласен на обработку персональных данных</label>
+        </div>
+        <div class="order-form__actions">
+          <button type="button" class="button button--secondary js-close-modal">Отмена</button>
+          <button type="submit" class="button button--primary">Заказать звонок</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Фиксированная кнопка возврата к началу страницы -->
+  <a href="#top" class="scroll-top-btn" aria-label="Вернуться к началу страницы">↑</a>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h3 class="site-footer__brand-title">SoundPulse</h3>
+          <p class="site-footer__description">
+            Официальный интернет-магазин аудиотехники студийного и аудиофильского уровня.
+          </p>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Навигация</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html" class="site-footer__nav-link">Главная</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Каталог товаров</a></li>
+            <li><a href="product.html" class="site-footer__nav-link">Товар дня</a></li>
+            <li><a href="order.html" class="site-footer__nav-link">Оформление заявки</a></li>
+            <li><a href="contacts.html" class="site-footer__nav-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Контакты</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="tel:+78005553535" class="site-footer__nav-link">+7 (800) 555-35-35</a></li>
+            <li><a href="mailto:info@soundpulse.ru" class="site-footer__nav-link">info@soundpulse.ru</a></li>
+            <li><span class="site-footer__nav-link">Москва, Ленинградский пр-т, 39</span></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">График</h4>
+          <ul class="site-footer__nav-list">
+            <li><span class="site-footer__nav-link">Пн–Вс: 10:00 – 21:00</span></li>
+            <li><span class="site-footer__nav-link">Онлайн: круглосуточно</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 SoundPulse. Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+        <p>Выполнил: Белишко Кирилл (группа ЭФБО-17-25)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

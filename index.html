@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundPulse — Магазин аудиофильской техники и акустики</title>
+  <meta name="description" content="Интернет-магазин премиальной аудиотехники SoundPulse: беспроводные наушники, студийные мониторы, усилители ЦАП с официальной гарантией.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Ссылка быстрого перехода к содержимому для скринридеров и клавиатурной навигации -->
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <!-- Сквозная шапка сайта с навигацией -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="На главную SoundPulse">
+        <img src="images/logo.svg" alt="Логотип SoundPulse" width="36" height="36" class="site-header__logo-icon">
+        <span>SoundPulse</span>
+      </a>
+
+      
+      <!-- Кнопка мобильного гамбургер-меню -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню навигации">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link site-nav__link--active" aria-current="page">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="catalog.html" class="site-nav__link">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="product.html" class="site-nav__link">Товар дня</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="order.html" class="site-nav__link">Заказ</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-header__contacts">
+        <a href="tel:+78005553535" class="site-header__phone">+7 (800) 555-35-35</a>
+        <button type="button" class="button button--primary js-open-modal">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Единственный тег main на странице -->
+  <main id="main-content" class="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Главный промо-баннер с быстрым переходом -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <span class="hero__badge">Новое поколение звука</span>
+          <h1 id="hero-title" class="hero__title">Чистый звук без компромиссов</h1>
+          <p class="hero__description">
+            Погрузитесь в детальное звучание с акустикой SoundPulse. Премиальные компоненты, активное шумоподавление нового поколения и до 45 часов автономной работы.
+          </p>
+          <div class="hero__actions">
+            <a href="catalog.html" class="button button--primary">Перейти в каталог</a>
+            <a href="#advantages" class="button button--secondary">Узнать преимущества</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <picture class="hero__picture">
+            <source media="(min-width: 768px)" srcset="images/hero-sound.svg">
+            <img src="images/hero-sound.svg" alt="Премиальные наушники SoundPulse" class="hero__image" width="480" height="320" loading="eager">
+          </picture>
+        </div>
+      </section>
+
+      <!-- Преимущества магазина и якорный переход -->
+      <section id="advantages" class="content-section" aria-labelledby="advantages-title">
+        <h2 id="advantages-title" class="section-title">Почему выбирают SoundPulse</h2>
+        <p class="section-subtitle">Создаем идеальные условия для истинных ценителей качественного звука</p>
+
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">★</div>
+            <h3 class="advantage-card__title">Премиальные компоненты</h3>
+            <p class="advantage-card__text">
+              Используем планарно-магнитные и титановые излучатели с калибровкой АЧХ в лабораторных условиях.
+            </p>
+          </div>
+
+          <div class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">🛡</div>
+            <h3 class="advantage-card__title">Официальная гарантия 2 года</h3>
+            <p class="advantage-card__text">
+              Прямой сервисный контракт, бесплатная диагностика и экспресс-замена устройства при дефекте.
+            </p>
+          </div>
+
+          <div class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">⚡</div>
+            <h3 class="advantage-card__title">Тест-драйв 14 дней</h3>
+            <p class="advantage-card__text">
+              Слушайте любимые треки в привычной обстановке. Полный возврат средств, если звук не оправдал ожиданий.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Популярные товары каталога -->
+      <section id="popular" class="content-section" aria-labelledby="popular-title">
+        <h2 id="popular-title" class="section-title">Популярные модели</h2>
+        <p class="section-subtitle">Хиты продаж и флагманы, заслужившие признание профессиональных звукорежиссеров</p>
+
+        <div class="cards-grid">
+          <!-- Карточка 1: Флагманские наушники (Хит продаж) -->
+          <article class="product-card product-card--hit">
+            <span class="product-card__badge product-card__badge--hit">Хит продаж</span>
+            <div class="product-card__image-wrap">
+              <img src="images/headphones-pro.svg" alt="Беспроводные наушники SoundPulse Pro Wireless" class="product-card__image" width="320" height="240" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Беспроводные наушники</span>
+              <h3 class="product-card__title">SoundPulse Pro Wireless</h3>
+              <p class="product-card__description">
+                Флагманские закрытые наушники с гибридным ANC, поддержкой LDAC и титановыми 40-мм драйверами.
+              </p>
+              <div class="product-card__meta">
+                <span class="product-card__rating">★★★★★ 4.9 (124)</span>
+                <span class="product-card__stock">В наличии</span>
+              </div>
+              <div class="product-card__pricing">
+                <span class="product-card__price">28 990 ₽</span>
+                <span class="product-card__price-old">34 990 ₽</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                <a href="order.html?product=SoundPulse-Pro-Wireless" class="button button--primary product-card__button">Купить</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 2: Студийные мониторы (Новинка) -->
+          <article class="product-card">
+            <span class="product-card__badge product-card__badge--new">Новинка</span>
+            <div class="product-card__image-wrap">
+              <img src="images/studio-monitors.svg" alt="Студийные мониторы SoundPulse Studio Monitor 5" class="product-card__image" width="320" height="240" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Студийная акустика</span>
+              <h3 class="product-card__title">SoundPulse Studio Monitor 5</h3>
+              <p class="product-card__description">
+                Двухполосные активные мониторы ближнего поля с кевларовым вуфером и честной АЧХ для сведения.
+              </p>
+              <div class="product-card__meta">
+                <span class="product-card__rating">★★★★★ 5.0 (48)</span>
+                <span class="product-card__stock">В наличии</span>
+              </div>
+              <div class="product-card__pricing">
+                <span class="product-card__price">42 500 ₽</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                <a href="order.html?product=SoundPulse-Studio-5" class="button button--primary product-card__button">Купить</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Карточка 3: Усилитель ЦАП (Скидка) -->
+          <article class="product-card product-card--discount">
+            <span class="product-card__badge product-card__badge--discount">-18%</span>
+            <div class="product-card__image-wrap">
+              <img src="images/dac-amp.svg" alt="ЦАП и усилитель SoundPulse DAC Audio Master" class="product-card__image" width="320" height="240" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Усилители и ЦАП</span>
+              <h3 class="product-card__title">SoundPulse DAC Audio Master</h3>
+              <p class="product-card__description">
+                Балансный настольный ЦАП с чипом ESS Sabre, поддержкой DSD512 и выходной мощностью до 2 Вт.
+              </p>
+              <div class="product-card__meta">
+                <span class="product-card__rating">★★★★☆ 4.8 (37)</span>
+                <span class="product-card__stock">Осталось 3 шт.</span>
+              </div>
+              <div class="product-card__pricing">
+                <span class="product-card__price">22 950 ₽</span>
+                <span class="product-card__price-old">27 990 ₽</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--secondary product-card__button">Подробнее</a>
+                <a href="order.html?product=SoundPulse-DAC-Master" class="button button--primary product-card__button">Купить</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="catalog-more">
+          <a href="catalog.html" class="button button--outline">Смотреть все модели в каталоге</a>
+        </div>
+      </section>
+
+      <!-- Отзывы покупателей с цитатами и рейтингом -->
+      <section id="reviews" class="content-section" aria-labelledby="reviews-title">
+        <h2 id="reviews-title" class="section-title">Отзывы экспертов и владельцев</h2>
+        <p class="section-subtitle">Что говорят звукорежиссеры и меломаны об оборудовании SoundPulse</p>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review-card__text">
+              «Наушники Pro Wireless превзошли ожидания: сцена широкая, детализация на высоких частотах чистейшая, без сибилянтов. Работаю в них в поездках без усталости.»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__author">Михаил Соколов</span>
+              <span class="review-card__verified">✓ Проверенный покупатель</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review-card__text">
+              «Studio Monitor 5 дают кристально честную середину. Для домашней студии за эти деньги альтернатив просто нет. Калибровка комнаты сработала безупречно.»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__author">Антон Громов</span>
+              <span class="review-card__verified">✓ Звукорежиссер студии SoundLab</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="review-card__text">
+              «Доставили на следующий день после оформления заявки. Упаковка премиальная, комплектация богатая. Тест-драйв 14 дней дал полную уверенность при покупке.»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__author">Елена Воронова</span>
+              <span class="review-card__verified">✓ Проверенный покупатель</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Аккордеон часто задаваемых вопросов на тегах details и summary -->
+      <section id="faq" class="content-section" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="section-title">Часто задаваемые вопросы</h2>
+        <p class="section-subtitle">Ответы на популярные вопросы о доставке, гарантии и прослушивании</p>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-item__question">Как работает программа тест-драйва 14 дней?</summary>
+            <p class="faq-item__answer">
+              После получения заказа у вас есть 14 календарных дней на тестирование акустики в домашних условиях. Если звук вам не подойдет, вы можете вернуть устройство в полной комплектации и получить 100% возврат средств без лишних вопросов.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__question">Какая гарантия предоставляется на продукцию?</summary>
+            <p class="faq-item__answer">
+              На всю технику SoundPulse действует официальная гарантия 2 года с даты покупки. При наступлении гарантийного случая мы организуем бесплатный забор курьером и ремонт в авторизованном сервисном центре.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__question">Можно ли послушать оборудование перед покупкой?</summary>
+            <p class="faq-item__answer">
+              Да, в нашем шоуруме в Москве (Ленинградский проспект, 39) оборудована звукоизолированная комната прослушивания со всеми моделями наушников, усилителей и мониторов.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__question">Какие кодеки поддерживают беспроводные модели?</summary>
+            <p class="faq-item__answer">
+              Флагманские модели поддерживают кодеки высокого разрешения LDAC, aptX HD, AAC и SBC, что позволяет передавать несжатый поток до 990 кбит/с при 24 бит/96 кГц.
+            </p>
+          </details>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Нативное модальное окно быстрого заказа на теге dialog -->
+  <dialog id="order-modal" class="modal" aria-labelledby="modal-title">
+    <div class="modal__inner">
+      <div class="modal__header">
+        <h2 id="modal-title" class="modal__title">Быстрый заказ</h2>
+        <button type="button" class="modal__close js-close-modal" aria-label="Закрыть модальное окно">&times;</button>
+      </div>
+      <form class="order-form" action="order.html" method="get">
+        <div class="order-form__field">
+          <label for="modal-name" class="order-form__label">Ваше имя <span class="order-form__required">*</span></label>
+          <input type="text" id="modal-name" name="name" class="order-form__input" placeholder="Иван Петров" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-phone" class="order-form__label">Телефон <span class="order-form__required">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="order-form__input" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-product" class="order-form__label">Интересующая модель</label>
+          <select id="modal-product" name="product" class="order-form__select">
+            <option value="SoundPulse Pro Wireless">SoundPulse Pro Wireless</option>
+            <option value="SoundPulse Studio 5">SoundPulse Studio Monitor 5</option>
+            <option value="SoundPulse DAC Audio Master">SoundPulse DAC Audio Master</option>
+          </select>
+        </div>
+        <div class="order-form__checkbox-field">
+          <input type="checkbox" id="modal-consent" name="consent" required>
+          <label for="modal-consent" class="order-form__label">Согласен на обработку персональных данных</label>
+        </div>
+        <div class="order-form__actions">
+          <button type="button" class="button button--secondary js-close-modal">Отмена</button>
+          <button type="submit" class="button button--primary">Заказать звонок</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Фиксированная кнопка возврата к началу страницы -->
+  <a href="#top" class="scroll-top-btn" aria-label="Вернуться к началу страницы">↑</a>
+
+  <!-- Подвал сайта с дублирующей навигацией и контактами -->
+  <footer id="contacts" class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <h3 class="site-footer__brand-title">SoundPulse</h3>
+          <p class="site-footer__description">
+            Официальный интернет-магазин аудиотехники студийного и аудиофильского уровня. Чистый звук, честные характеристики и клиентский сервис высшего уровня.
+          </p>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Навигация</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html" class="site-footer__nav-link">Главная</a></li>
+            <li><a href="catalog.html" class="site-footer__nav-link">Каталог товаров</a></li>
+            <li><a href="product.html" class="site-footer__nav-link">Товар дня</a></li>
+            <li><a href="order.html" class="site-footer__nav-link">Оформление заявки</a></li>
+            <li><a href="contacts.html" class="site-footer__nav-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Разделы страницы</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="index.html#advantages" class="site-footer__nav-link">Преимущества</a></li>
+            <li><a href="index.html#popular" class="site-footer__nav-link">Популярное</a></li>
+            <li><a href="index.html#reviews" class="site-footer__nav-link">Отзывы</a></li>
+            <li><a href="index.html#faq" class="site-footer__nav-link">Частые вопросы</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4 class="site-footer__col-title">Связь с нами</h4>
+          <ul class="site-footer__nav-list">
+            <li><a href="tel:+78005553535" class="site-footer__nav-link">+7 (800) 555-35-35</a></li>
+            <li><a href="mailto:info@soundpulse.ru" class="site-footer__nav-link">info@soundpulse.ru</a></li>
+            <li><span class="site-footer__nav-link">Москва, Ленинградский пр-т, 39</span></li>
+            <li><span class="site-footer__nav-link">Ежедневно с 10:00 до 21:00</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 SoundPulse. Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+        <p>Выполнил: Белишко Кирилл (группа ЭФБО-17-25)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

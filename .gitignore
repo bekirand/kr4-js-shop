@@ -1,0 +1,15 @@
+# Системные файлы ОС
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Файлы сред разработки
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Временные файлы и логи
+*.log
+*.tmp
+.env
