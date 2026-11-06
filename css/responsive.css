@@ -543,3 +543,56 @@ body {
     max-width: 1320px;
   }
 }
+
+/* 13. АДАПТИВНОСТЬ КОРЗИНЫ И ПАНЕЛИ КАТАЛОГА (КР №4) */
+@media (max-width: 859px) {
+  .cart-layout {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-lg) !important;
+  }
+
+  .cart-summary-card {
+    position: static !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .cart-item {
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: var(--space-md);
+  }
+
+  .cart-item__media {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item__info {
+    width: calc(100% - 80px);
+  }
+
+  .cart-item__quantity {
+    margin-left: 0;
+  }
+
+  .cart-item__total {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .cart-item__remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  .catalog-toolbar__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .catalog-sort-select {
+    width: 100%;
+  }
+}

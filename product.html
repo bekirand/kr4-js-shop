@@ -40,7 +40,12 @@
             <a href="product.html" class="site-nav__link site-nav__link--active" aria-current="page">Товар дня</a>
           </li>
           <li class="site-nav__item">
-            <a href="order.html" class="site-nav__link">Заказ</a>
+            <a href="cart.html" class="site-nav__link">
+              Корзина <span class="nav-cart-badge js-cart-count">0</span>
+            </a>
+          </li>
+          <li class="site-nav__item">
+            <a href="order.html" class="site-nav__link">Оформить заказ</a>
           </li>
           <li class="site-nav__item">
             <a href="contacts.html" class="site-nav__link">Контакты</a>
@@ -107,9 +112,9 @@
           </div>
 
           <div class="product-details__actions">
-            <a href="order.html?product=SoundPulse-Pro-Wireless" class="button button--primary" style="padding: 14px 28px; font-size: 1.05rem;">
-              Оформить заказ
-            </a>
+            <button type="button" class="button button--primary js-product-buy" style="padding: 14px 28px; font-size: 1.05rem;">
+              Добавить в корзину
+            </button>
             <button type="button" class="button button--secondary js-open-modal" style="padding: 14px 28px; font-size: 1.05rem;">
               Купить в 1 клик
             </button>
@@ -283,6 +288,7 @@
             <li><a href="index.html" class="site-footer__nav-link">Главная</a></li>
             <li><a href="catalog.html" class="site-footer__nav-link">Каталог товаров</a></li>
             <li><a href="product.html" class="site-footer__nav-link">Товар дня</a></li>
+                        <li><a href="cart.html" class="site-footer__nav-link">Корзина покупок</a></li>
             <li><a href="order.html" class="site-footer__nav-link">Оформление заявки</a></li>
             <li><a href="contacts.html" class="site-footer__nav-link">Контакты</a></li>
           </ul>
@@ -308,12 +314,15 @@
       </div>
 
       <div class="site-footer__bottom">
-        <p>© 2026 SoundPulse. Контрольная работа №1 по дисциплине «Фронтенд и бэкенд разработка».</p>
+        <p>© 2026 SoundPulse. Контрольная работа №4 | Студент: Белишко Кирилл (ЭФБО-17-25)</p>
         <p>Выполнил: Белишко Кирилл (группа ЭФБО-17-25)</p>
       </div>
     </div>
   </footer>
 
+    <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
